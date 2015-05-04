@@ -1,0 +1,70 @@
+extends ../layouts/index
+block content
+    section.page__section.section._promo
+        .page__wrapper.section__wrapper
+            .section__col._promo
+                +promo
+            .section__col._stat
+                +stat
+    section.page__section.section._project(id="project")
+        .page__wrapper.section__wrapper
+            h1.section__title О проекте
+            
+            .section__content
+                .section__col._text
+                    h2.section__subtitle Проектом предусмотрено:
+                    ul
+                        li Устройство покрытия из резиновой крошки с разметкой для баскетбольной и волейбольной площадок
+                        li 4 баскетбольных колец и сетки для волейбола
+                        li Установка скамеек
+                        li Спортивный комплекс для Воркаут
+                        li Ограждение площадки
+                        li Столы для настольного тенниса
+                        li Прожекторы для освещения площадки в темное время суток
+                        li Заливка площадки в зимнее время года для катания на коньках
+                .section__col._gallery
+                    +gallery
+
+    section.page__section.section._location(id="location")
+        .page__wrapper.section__wrapper
+            h1.section__title Расположение площадки
+            h2.section__subtitle Площадка будет построена в Раменском городском парке, рядом с озером Борисоглебское
+            .section__content
+                +map
+    
+    section.page__section.section._charity(id="charity")
+        .page__wrapper.section__wrapper
+            h1.section__title Поддержи проект
+            .section__content
+                .section__col._text
+                    p
+                        | Текст по радость вливания бабла в хорошее дело. 
+                        | И да пребудет с нами сила! И всем +100500 в карму.
+                        | Текст по радость вливания бабла в хорошее дело. 
+                        | И да пребудет с нами сила! И всем +100500 в карму.
+                        br
+                        | Текст по радость вливания бабла в хорошее дело. 
+                        | И да пребудет с нами сила! И всем +100500 в карму.
+                    p 
+                        | Текст по радость вливания бабла в хорошее дело. 
+                        | И да пребудет с нами сила! И всем +100500 в карму.
+                .section__col._form
+                    +payment-form
+
+    section.page__section.section._fund(id="fund")
+        .page__wrapper.section__wrapper
+            h1.section__title О фонде
+            .section__content
+                .section__col._text
+                    p
+                        | Наш фонд «Будь в форме» создан для поддержки и развития спорта 
+                        | и физической культуры в Раменском районе.
+                    p
+                        | Мы стремимся создать максимально благоприятную среду для занятий 
+                        | физической культурой и спортом, поддерживаем секции, молодых спортсменов, 
+                        | помогаем проводить спортивные мероприятия.
+                    p
+                        | Мы очень любим спорт и активный образ жизни. 
+                        b Вместе мы победим!
+                .section__col._president
+                    +president

@@ -1,0 +1,153 @@
+.section {
+	font-family: @fontFamilySans;
+
+	&:extend(.clearfix all);
+
+	&__col {
+		display: inline-block;
+		vertical-align: top;
+
+		&._promo {
+			margin-left: -73px;
+		}
+
+		&._stat {
+
+		}
+	}
+
+	&._promo {
+		font-size: 0;
+		white-space: nowrap;
+		background: #eaebea;
+	}
+
+	&._promo & {
+
+	}
+
+	&._project {
+		padding: 17px 0 47px 13px;
+	}
+
+	&._project & {
+		
+		&__title {
+			margin-bottom: 9px;
+		}
+
+		&__subtitle {
+			margin-bottom: 13px;
+		}
+
+		&__col {
+			&._text {
+				width: 465px;
+			}
+
+			&._gallery {
+				float: right;
+				padding-top: 17px;
+				padding-right: 6px;
+			}
+		}
+	}
+
+	&._location {
+		background: #eaebea;
+		text-align: center;
+		padding: 20px 0 35px;
+	}
+
+	&._location & {
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__subtitle {
+			margin-bottom: 29px;
+		}
+
+		&__content {
+			padding: 1px 1px 19px 7px;
+		}
+	}
+
+	&._charity {
+		text-align: center;
+		padding: 20px 0 47px;
+	}
+
+	&._charity & {
+		&__title {
+
+		}
+
+		&__content {
+			text-align: left;
+			padding: 5px 0 0 9px;
+			line-height: 24px;
+		}
+
+		&__col._text {
+			width: 443px;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		&__col._form {
+			float: right;
+		}
+	}
+
+	&._fund {
+		background: #ececec;
+		padding: 44px 0 79px;
+		margin-bottom: 5px;
+	}
+
+	&._fund & {
+		&__title {
+			margin-bottom: 16px;
+		}
+		
+		&__wrapper {
+			padding-left: 8px;
+		}
+
+		&__col {
+			&._text {
+				width: 590px;
+				line-height: 21px;
+			}
+
+			&._president {
+				margin-left: 63px;
+				margin-top: -45px;
+			}
+		}
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		line-height: 23px;
+		list-style-type: none;
+		margin-left: 24px;
+
+		li {
+			margin-bottom: 9px;
+			position: relative;
+
+			&:before {
+				content: '•';
+				display: inline-block;
+				position: absolute;
+				color: #ed1b24;
+				font-size: 24px;
+				left: -24px;
+			}
+		}
+	}
+}
