@@ -12,4 +12,6 @@ mixin president()
 			a.president__email(href="mailto:karmazinsky@gmail.com") karmazinsky@gmail.com
 			.president__phone +7 926 572 61 10
 			
-			a.president__details-link(href="#") Реквизиты фонда
+			a.president__details-link(href="#details", onclick='return {"popupLink": {}}').js-widget Реквизиты фонда
+			.president__details-popup
+				+details-popup
