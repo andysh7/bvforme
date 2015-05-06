@@ -9,24 +9,25 @@
             this.$images = this.element.find('.gallery__photo');
             this.magnificPopup = $.magnificPopup.instance;
 
-            this._initPlugins();
             this._initEvents();
+            this._initPlugins();
         },
 
         _initEvents: function () {
             var that = this;
-            
-            this._on(this.document, {
-                'click .mfp-prev': function(e) {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                    that.magnificPopup.prev();
-                },
-                'click .mfp-next': function(e) {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                    that.magnificPopup.next();
-                }
+
+            this.$photos.on('init', function(event, slick, direction){
+              that.$photos.css({overflow: 'visible'});
+            });
+
+            $(document).on('click', '.mfp-prev', function(e) {
+                e.preventDefault();
+                that.magnificPopup.prev();
+            });
+
+            $(document).on('click', '.mfp-next', function(e) {
+                e.preventDefault();
+                that.magnificPopup.next();
             });
         },
 
@@ -37,26 +38,23 @@
                 infinite: false
             });
 
+
             this.$images.magnificPopup({
                 type: 'image',
-                closeBtnInside: true,
-                closeOnContentClick: false,
-                closeOnBgClick: false,
-                closeMarkup: '<button title="%title%" class="mfp-close _gallery"><i class="mfp-close-icn">&times;</i></button>',
+                mainClass: '_gallery',
                 image: {
-                    markup: '<div class="mfp-figure">'+
-                            '<div class="mfp-close"></div>'+
-                            '<div class="mfp-img"></div>'+
-                                '<div class="mfp-bottom-bar">'+
-                                    '<div class="mfp-title"></div>'+
-                                '</div>'+
-                            '</div>'+
-                            '<button class="mfp-prev"></button>'+
-                            '<button class="mfp-next"></button>'
-                          , // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+                    markup: '<div class="mfp-figure">' +
+                                '<div class="mfp-close"></div>' +
+                                '<button class="mfp-prev"></button>' +
+                                '<button class="mfp-next"></button>' +
+                                '<div class="mfp-img"></div>' +
+                                '<div class="mfp-bottom-bar">' +
+                                    '<div class="mfp-title"></div>' +
+                                '</div>' +
+                            '</div>',
                     titleSrc: 'title',
                     verticalFit: false,
-                    tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
+                    tError: '<a href="%url%">Изображение</a> не может быть загружено.'
                 },
                 gallery:{
                     enabled:true
