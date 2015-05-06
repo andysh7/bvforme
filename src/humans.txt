@@ -1,0 +1,16 @@
+/* TEAM */
+	Front-end Developer: Andrey Shulga.
+	Contact: hello [at] shulga.pro
+	Twitter: @shulga.pro
+	Location: Moscow, Russia
+
+	Art-Director: Nadezhda Manichkina
+	Contact: nadya [at] adv.ru
+	From: Moscow, Russia
+
+/* SITE */
+	Last update: 2015/05/06
+	Language: Russian
+	Standarts: HTML5, CSS3, ES5
+	Components: jQuery, slick, magnific, Yandex.Maps, html5shiv, jQuery UI Widgets
+	IDE: Sublime Text 3

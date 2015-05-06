@@ -1,6 +1,23 @@
 mixin gallery()
-	.gallery
+	.gallery(onclick='return {"gallery": {}}').js-widget
 		.gallery__photos
 			.gallery__item
-				img.gallery__photo(src="./images/plan/plan1.jpg", width="518", height="294", alt="")
+				a.gallery__photo(href="/images/plan/photo1.jpg", title="Общий план площадки")
+					img(src="/images/plan/photo1.jpg", height="294", alt="")
+				span.gallery__label Общий план площадки
+			.gallery__item
+				a.gallery__photo(href="/images/plan/photo2.jpg", title="Общий план площадки")
+					img(src="/images/plan/photo2.jpg", height="294", alt="")
+				span.gallery__label Общий план площадки
+			.gallery__item
+				a.gallery__photo(href="/images/plan/photo3.jpg", title="Общий план площадки")
+					img(src="/images/plan/photo3.jpg", height="294", alt="")
+				span.gallery__label Общий план площадки
+			.gallery__item
+				a.gallery__photo(href="/images/plan/photo4.jpg", title="Общий план площадки")
+					img(src="/images/plan/photo4.jpg", height="294", alt="")
+				span.gallery__label Общий план площадки
+			.gallery__item
+				a.gallery__photo(href="/images/plan/photo5.jpg", title="Общий план площадки")
+					img(src="/images/plan/photo5.jpg", height="294", alt="")
 				span.gallery__label Общий план площадки

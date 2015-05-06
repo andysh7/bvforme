@@ -1,19 +1,14 @@
 ;(function ($) {
     'use strict';
 
-    $.widget('bvforme.menu', {
-        options: {
-        },
-
+    $.widget('bvforme.scollLink', {
         _create: function () {
-            this.$menuLinks = this.element.find('.menu__link');
-
             this._initPlugins();
             this._initEvents();
         },
 
         _initEvents: function () {
-            this._on(this.$menuLinks, {
+            this._on({
                 'click': function(e) {
                     e.preventDefault();
                     
