@@ -1,0 +1,41 @@
+.about-actions {
+	padding: 27px 0 0 2px;
+
+	&__link {
+		background: #fff;
+		position: relative;
+		height: 52px;
+		font-size: 18px;
+		border: 2px solid #ed1b24;
+		display: inline-block;
+		text-decoration: none;
+		line-height: 40px;
+		padding: 0 10px;
+		transition: all 0.3s linear;
+		vertical-align: top;
+
+		&:hover {
+			background: #ed1b24;
+		}
+
+		&._b1 {
+			margin-right: 20px;
+			padding: 0 21px 0 22px;
+		}
+
+		&._b2 {
+			padding: 0 13px 0 21px;
+		}
+	}
+
+	&__label {
+		color: #ed1b24;
+		border-bottom: 1px dotted;
+		vertical-align: middle;
+	}
+
+	&__link:hover > &__label {
+		color: #fff;
+		border-bottom: 0;
+	}
+}
